@@ -1,0 +1,25 @@
+{
+  "name": "common-helper-methods",
+  "version": "0.0.1",
+  "description": "A collection of helper methods that can be used on any object type in JavaScript.",
+  "private": false,
+  "repository": "https://github.com/alsonick/common-helper-methods",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "publish": "changeset publish",
+    "test": "vitest",
+    "lint": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@changesets/cli": "^2.26.0",
+    "tsup": "^6.6.3",
+    "typescript": "^4.9.5",
+    "vitest": "^0.29.2"
+  }
+}
