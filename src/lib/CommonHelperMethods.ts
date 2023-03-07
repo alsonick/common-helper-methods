@@ -72,4 +72,30 @@ export class CommonHelperMethods {
       return false;
     },
   };
+  array = {
+    /**
+     * Transforms two given arrays into a hash map.
+     * @param  {[T]} keys An array of keys.
+     * @param  {[V]} values An array of values.
+     * @return {HashMap}        Returns the hash map.
+     */
+    hashMap: <T, V>(keys: T[], values: V[]): Map<T, V> => {
+      const map = new Map<T, V>();
+
+      if (!keys.length || !values.length) {
+        throw new Error('Must include both keys and values.');
+      }
+
+      if (keys.length !== values.length) {
+        throw new Error(
+          "'keys' and 'values' must contain the same amount of arguments.",
+        );
+      }
+
+      for (let i = 0; i < keys.length; i++) {
+        map.set(keys[i] as T, values[i] as V);
+      }
+      return map;
+    },
+  };
 }
