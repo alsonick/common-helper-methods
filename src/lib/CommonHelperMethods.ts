@@ -97,5 +97,37 @@ export class CommonHelperMethods {
       }
       return map;
     },
+
+    /**
+     * Returns the range between the largest and smallest number in a given array.
+     * @param  {Array} array The array input.
+     * @return {Number}        Returns the range between the largest and smallest number.
+     */
+    range: (array: number[]): number => {
+      if (!array.length || array.length === 1) {
+        throw new Error(
+          'Argument cannot be empty and it must contain more than 1 arguments.',
+        );
+      }
+
+      // Gets the smallest number in the given array.
+      let smallest = array[0] as number;
+      for (let i = 1; i < array.length; i++) {
+        if ((array[i] as number) < smallest) {
+          smallest = array[i] as number;
+        }
+      }
+
+      // Gets the largest number in the given array.
+      let largest = array[0] as number;
+      for (let i = 0; i < array.length; i++) {
+        if ((array[i] as number) > largest) {
+          largest = array[i] as number;
+        }
+      }
+
+      // Returns the range between the largest and smallest number.
+      return largest - smallest;
+    },
   };
 }
