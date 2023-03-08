@@ -1,6 +1,6 @@
 {
   "name": "common-helper-methods",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A collection of helper methods that can be used on any object type in JavaScript.",
   "private": false,
   "repository": "https://github.com/alsonick/common-helper-methods",
